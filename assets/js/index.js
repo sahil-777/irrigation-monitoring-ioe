@@ -4,7 +4,7 @@ let yValues = [];
 let timeArray = [];
 
 window.onload = function () {
-    // getData();
+    getData(20);
     drawGraph();
 };
 
@@ -32,17 +32,17 @@ function drawGraph() {
             },
             scales: {
                 x: {
-                    title:{
-                        display:true,
-                        text:"Time",
+                    title: {
+                        display: true,
+                        text: "Time",
                     }
                 },
                 y: {
                     min: 0,
                     max: 100,
-                    title:{
-                        display:true,
-                        text:"Unit"
+                    title: {
+                        display: true,
+                        text: "Unit"
                     }
                 }
             }
@@ -50,8 +50,11 @@ function drawGraph() {
     });
 }
 
-function getData() {
-
+function getData(cnt) {
+    while (cnt--) {
+        xValues.push(getRandomIntInclusive(0, 100));
+        timeArray.push(getCurrentTime());
+    }
 }
 
 function addValue() {
