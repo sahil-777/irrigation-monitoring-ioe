@@ -32,17 +32,17 @@ function drawGraph() {
             },
             scales: {
                 x: {
-                    title:{
-                        display:true,
-                        text:"Time",
+                    title: {
+                        display: true,
+                        text: "Time",
                     }
                 },
                 y: {
                     min: 0,
                     max: 100,
-                    title:{
-                        display:true,
-                        text:"Unit"
+                    title: {
+                        display: true,
+                        text: "Unit"
                     }
                 }
             }
@@ -54,8 +54,8 @@ function getData() {
 
 }
 
-function addValue() {
-    xValues.push(getRandomIntInclusive(0, 100));
+function addValue(val) {
+    xValues.push(val ? val : getRandomIntInclusive(0, 100));
     timeArray.push(getCurrentTime());
     moistureGraph.update();
 }

@@ -1,4 +1,3 @@
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 const firebaseConfig = {
     apiKey: "AIzaSyDytHHRamh8k1Gp2NLUslBsjrvmW9gG_6k",
     authDomain: "irrigation-monitoring-ioe.firebaseapp.com",
@@ -10,5 +9,6 @@ const firebaseConfig = {
   };
 
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+  const app = firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
   
