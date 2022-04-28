@@ -1,16 +1,21 @@
-h1{
-    /* height: 100%;
-    width: 100%; */
-    /* background: red; */
+h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-  }
+}
 
-  canvas{
+canvas {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-  }
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+

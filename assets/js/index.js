@@ -1,6 +1,8 @@
 let moistureGraph;
 let xValues = [];
 let yValues = [];
+let timeArray = [];
+
 window.onload = function () {
     // getData();
     drawGraph();
@@ -10,7 +12,7 @@ function drawGraph() {
     moistureGraph = new Chart("moisture-graph", {
         type: "line",
         data: {
-            labels: xValues,
+            labels: timeArray,
             datasets: [{
                 label: "Moisture level",
                 fill: false,
@@ -29,9 +31,19 @@ function drawGraph() {
                 // }
             },
             scales: {
+                x: {
+                    title:{
+                        display:true,
+                        text:"Time",
+                    }
+                },
                 y: {
                     min: 0,
                     max: 100,
+                    title:{
+                        display:true,
+                        text:"Unit"
+                    }
                 }
             }
         }
@@ -44,7 +56,19 @@ function getData() {
 
 function addValue() {
     xValues.push(getRandomIntInclusive(0, 100));
+    timeArray.push(getCurrentTime());
     moistureGraph.update();
+}
+
+function getCurrentTime() {
+    var time = new Date();
+    return (
+        time.toLocaleString('en-US', {
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true
+        })
+    );
 }
 
 function getRandomIntInclusive(min, max) {
