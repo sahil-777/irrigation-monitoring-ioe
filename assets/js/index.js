@@ -57,8 +57,8 @@ function getData(cnt) {
     }
 }
 
-function addValue() {
-    xValues.push(getRandomIntInclusive(0, 100));
+function addValue(val) {
+    xValues.push(val ? val : getRandomIntInclusive(0, 100));
     timeArray.push(getCurrentTime());
     moistureGraph.update();
 }
