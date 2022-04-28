@@ -11,11 +11,3 @@ canvas {
     justify-content: center;
     text-align: center;
 }
-
-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
