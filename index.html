@@ -6,11 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
+    <!--Chart.js library-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./assets/js/index.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <p id="initial-commit">Initial Commit</p>
+    <h1 id="page-title">Irrigation Monitoring</h1>
+    <canvas id="moisture-graph" style="width: 50%;height: 50%;"></canvas>
+    <button id="add-value-btn" onclick="addValue()">Add Value</button>
 </body>
 
 </html>
