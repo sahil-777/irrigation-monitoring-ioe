@@ -1,0 +1,16 @@
+h1{
+    /* height: 100%;
+    width: 100%; */
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  canvas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
